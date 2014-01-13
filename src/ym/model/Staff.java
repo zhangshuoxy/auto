@@ -31,6 +31,7 @@ public class Staff implements Serializable{
 	private String  idea;
 	private String  photo;
 	
+	
 	@Id
 	@GenericGenerator(name = "idGenerator", strategy = "assigned")
 	@GeneratedValue(generator = "idGenerator")
