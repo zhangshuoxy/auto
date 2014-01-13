@@ -1,0 +1,885 @@
+
+@charset "utf-8";
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-attachment: scroll;
+    background-color: #D5D5D5;
+    background-repeat: no-repeat;
+    font-family: "Microsoft Yahei",Arial,Helvetica,sans-serif;
+    font-size: 16px;
+    text-align: center;
+}
+html, body, div, blockquote, img, label, h1, h2, h3, h4, h5, h6, pre, ul, ol, li, dl, dt, dd, form, fieldset, input, th, td, address {
+    border: 0 none;
+    font-size: 12px;
+    line-height: 1.65;
+    list-style: none outside none;
+    margin: 0;
+    outline: medium none;
+    padding: 0;
+}
+a:link, a:visited {
+    color: #164A84;
+    text-decoration: none;
+}
+a:hover, a:active {
+    color: #CC0000;
+    text-decoration: underline;
+}
+p {
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+}
+ul, li {
+    list-style: none outside none;
+}
+.clear {
+    clear: both;
+}
+.content {
+    background-color: white;
+    height: 2000px;
+    margin: 0 auto;
+    padding-bottom: 50px;
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 992px;
+}
+.siderbarl {
+    float: left;
+    margin-top: 10px;
+    overflow: hidden;
+    padding-bottom: 1px;
+    width: 232px;
+}
+.leftbas {
+    border: 1px solid #D1DDEA;
+    clear: both;
+    float: left;
+    margin-bottom: 10px;
+    overflow: hidden;
+    width: 225px;
+}
+.leftbas h2 {
+    background: url("../images/bgs.png") repeat scroll 0 -131px #FFFFFF;
+    border-bottom: 1px solid #FFFFFF;
+    height: 30px;
+    line-height: 30px;
+    overflow: hidden;
+    padding-left: 10px;
+}
+.leftbas1 {
+    float: none;
+}
+.brands dl {
+    border-bottom: 1px dotted #BFBFBF;
+    clear: both;
+    display: inline;
+    float: left;
+    margin: 10px 10px -1px;
+    overflow: hidden;
+    padding: 0 0 10px;
+    width: 229px;
+}
+.brands dt, .brands dd {
+    float: left;
+    overflow: hidden;
+}
+.brands dt {
+    border-right: 1px solid #D1DDEA;
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+    width: 46px;
+}
+.brands dt img {
+    display: block;
+    margin: 0 -9px;
+}
+.brands dd {
+    border-left: 1px solid #D1DDEA;
+    margin-left: -1px;
+    margin-top: -15px;
+    padding-left: 10px;
+    width: 168px;
+}
+.brands dd h3 {
+    clear: both;
+    font-size: 12px;
+    font-weight: 400;
+    padding-top: 15px;
+}
+.brands dd a {
+    margin: 0 4px;
+    white-space: nowrap;
+}
+.brands dd a.current {
+    background-color: #D9D9D9;
+}
+.salers {
+    padding-bottom: 10px;
+}
+.salers .more {
+    float: right;
+    margin: -24px 3px 0 0;
+    position: relative;
+}
+.salers h2 {
+    margin-bottom: -3px;
+    position: relative;
+}
+.salelist {
+    border-bottom: 1px dotted #BFBFBF;
+    float: left;
+    margin: 0 10px;
+    padding: 10px 0;
+    width: 261px;
+}
+i.medal {
+    background: url("../images/medal.png") no-repeat scroll 0 0 transparent;
+    display: inline-block;
+    height: 16px;
+    margin: 0 0 0 7px;
+    overflow: hidden;
+    vertical-align: middle;
+    width: 10px;
+}
+.salelist img {
+    border: 1px solid #999999;
+    float: left;
+    height: 110px;
+    margin-left: 5px;
+    width: 80px;
+}
+.salelist ul {
+    float: right;
+    overflow: hidden;
+    padding: 3px 0 0 5px;
+    text-align: left;
+    width: 165px;
+}
+.salelist ul label {
+    color: #999999;
+}
+.salers span.change {
+    background: url("../images/bgs.png") no-repeat scroll -235px -43px transparent;
+    clear: both;
+    color: #164A84;
+    cursor: pointer;
+    display: none;
+    float: left;
+    margin: 10px 0 0 208px;
+    padding-right: 20px;
+    width: 60px;
+}
+.salers span.changeup {
+    background-position: -235px -23px;
+}
+.map_card {
+    overflow: hidden;
+    padding-bottom: 10px;
+}
+.map_card p {
+    padding: 5px 10px;
+}
+.map_card div {
+    border: 1px solid #A3A3A3;
+    display: inline;
+    float: left;
+    height: 189px;
+    margin: 0 10px 10px;
+    overflow: hidden;
+    width: 266px;
+}
+.map_card div {
+    border: 1px solid #A3A3A3;
+    display: inline;
+    float: left;
+    height: 189px;
+    margin: 0 10px 10px;
+    overflow: hidden;
+    width: 266px;
+}
+.siderbarr {
+    float: left;
+    margin-left: 0;
+    margin-top: 10px;
+    overflow: hidden;
+    width: 760px;
+}
+.seventhnav {
+    border-color: #D1DDEA;
+    border-style: solid;
+    border-width: 1px;
+    float: left;
+    margin-bottom: 10px;
+    overflow: hidden;
+    padding-bottom: 20px;
+    width: 758px;
+}
+.bt3 {
+    background: none repeat scroll 0 0 #F6F6F6;
+    border-bottom: 1px solid  #D1DDEA;
+    color: #787877;
+    height: 28px;
+    line-height: 28px;
+    margin: 0 auto;
+    width: 100%;
+}
+.retitle0 {
+    float: left;
+    font-weight: bold;
+    padding-left: 13px;
+    width: 160px;
+}
+.bt3n {
+    float: left;
+    padding-right: 199px;
+    text-align: right;
+    width: 236px;
+}
+.bt31 {
+    float: left;
+    text-align: center;
+    width: 325px;
+}
+.bt32 {
+    float: left;
+    padding-left: 76px;
+    text-align: center;
+    width: 111px;
+}
+.bt33 {
+    float: left;
+    text-align: right;
+    width: 61px;
+}
+.nr3 {
+    border-bottom: 1px dotted  #D1DDEA;
+    float: left;
+    margin: 0 13px;
+    overflow: hidden;
+    padding: 13px 0;
+    width: 732px;
+}
+.nr31 {
+    border-color: #C9C9C9;
+    border-style: solid;
+    border-width: 1px;
+    float: left;
+    height: 108px;
+    position: relative;
+    width: 158px;
+}
+.nr31 A {
+    display: table-cell;
+    height: 108px;
+    padding: 0;
+    text-align: center;
+    vertical-align: middle;
+    width: 158px;
+}
+.nr31 A IMG {
+    vertical-align: middle;
+}
+.nr31 IMG {
+    border-color: -moz-use-text-color;
+    border-style: none;
+    border-width: medium;
+    display: block;
+    margin: 0 auto;
+    max-height: 100px;
+    max-width: 150px;
+    padding: 0;
+}
+.nr32 {
+    float: left;
+    overflow: hidden;
+    padding-left: 16px;
+    width: 556px;
+}
+.nr321 {
+    float: left;
+}
+.nr3211 {
+    float: left;
+    height: 40px;
+    width: 200px;
+}
+.nr3211 A {
+    color: #014199;
+    display: block;
+    float: left;
+    font-weight: bold;
+    text-decoration: underline;
+}
+.zt {
+    color: #FF0000;
+    font-weight: bold;
+}
+.nr3212 {
+    float: left;
+    padding-left: 20px;
+    text-align: center;
+    width: 330px;
+}
+.nr3212 SPAN {
+    float: left;
+    overflow: hidden;
+    width: 105px;
+}
+.nr322 {
+    float: left;
+    line-height: 1.5em;
+    padding-top: 20px;
+    text-indent: 2em;
+}
+.eighthnav {
+    border-color: #CCCCCC;
+    border-style: solid;
+    border-width: 1px;
+    float: left;
+    margin-bottom: 10px;
+    overflow: hidden;
+    width: 756px;
+}
+.nr4 {
+    float: left;
+    margin-top: 10px;
+    overflow: hidden;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    width: 720px;
+}
+.nr4 UL LI {
+    color: #404040;
+    float: left;
+    line-height: 21px;
+    overflow: hidden;
+    width: 100%;
+}
+.nr41 {
+    color: #787877;
+    float: left;
+    margin-right: 22px;
+    width: 60px;
+}
+.nr42 {
+    color: #787877;
+    float: right;
+    overflow: hidden;
+    width: 100px;
+}
+.nr4 UL LI A {
+    color: #0F0CBF;
+    display: block;
+    float: left;
+    font-size: 14px;
+    width: 300px;
+}
+
+.info {
+   /* background: none repeat scroll 0 0 #FFFEE5;*/
+    border: 1px solid #D1DDEA;
+    float: left;
+    height: 277px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    padding: 0 10px 10px;
+    width: 280px;
+}
+.info a.cyt {
+    background: url("../images/bgs.png") no-repeat scroll -90px 0 transparent;
+    display: block;
+    float: right;
+    height: 20px;
+    line-height: 100px;
+    margin-top: -28px;
+    overflow: hidden;
+    width: 72px;
+}
+.info h2 {
+    border-bottom: 1px dotted #9FA0A0;
+    line-height: 35px;
+    font-size: 15px;
+    margin-top: 6px;
+}
+.info ul {
+    overflow: hidden;
+    padding-top: 5px;
+    width: 275px;
+}
+.info li {
+    clear: both;
+    color: #000000;
+    float: left;
+    height: 26px;
+    line-height: 26px;
+    overflow: hidden;
+    position: relative;
+    white-space: nowrap;
+    text-align:left;
+    width: 300px;
+}
+.info li label {
+    color: #999999;
+    display: block;
+    float: left;
+    line-height: 26px;
+    overflow: hidden;
+    width: 62px;
+}
+.info li span {
+    margin-right: 3px;
+}
+.info li .click_btn {
+    background: url("../images/bgs.png") no-repeat scroll 0 0 transparent;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: block;
+    float: left;
+    height: 20px;
+    line-height: 20px;
+    overflow: hidden;
+    text-align: center;
+    text-decoration: none;
+    width: 63px;
+}
+.info li a.click_btn:link, .info li a.click_btn:visited, .info li a.click_btn:hover {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+.info li .tel400 {
+    background: url("../images/bgs.png") no-repeat scroll 100% -100px transparent;
+    color: #CC0000;
+    font-weight: 700;
+    padding-right: 15px;
+}
+.info li img {
+    margin: 4px 10px 0 0;
+}
+
+
+.news {
+    border: 1px solid #D1DDEA;
+    float: left;
+    height: 286px;
+    margin: 1px 4px 0 1px;
+    overflow: hidden;
+    text-align: right;
+    width: 450px;
+}
+.news p {
+    border-bottom: 1px dotted #9FA0A0;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 5px;
+    text-align: center;
+}
+.news p a {
+    white-space: nowrap;
+    margin-bottom: 5px;
+}
+.news ul {
+    float: left;
+    padding-top: 5px;
+    text-align: left;
+}
+.news li {
+    clear: both;
+    float: left;
+    height: 20px;
+    line-height: 20px;
+    overflow: hidden;
+    padding: 0 0 1px 7px;
+    width: 440px;
+}
+.news li.barry {
+    padding-bottom: 5px;
+}
+.news li span {
+    color: #666666;
+    float: left;
+    margin-left: 3px;
+    padding-right: 8px;
+}
+.news li span a, .news li span a:link, .news li span a:visited, .news li span a:active {
+    color: #666666;
+    text-decoration: underline;
+}
+.news li span a:hover {
+    color: #CC0000;
+    text-decoration: none;
+}
+.news li small {
+    color: #565656;
+    display: block;
+    float: right;
+    font-size: 12px;
+    text-align: center;
+    width: 60px;
+}
+.news li a {
+    text-decoration: underline;
+    text-indent: 10px;
+    white-space: nowrap;
+}
+.news li a:link, .news li a:visited {
+    text-decoration: underline;
+}
+.news li a:hover {
+    text-decoration: none;
+}
+.news .more{
+	margin-right: 8px;
+}
+
+/**车型图片**/
+
+.carlist {
+    border: 1px solid #D1DDEA;
+    float: left;
+    margin-left: 10px;
+}
+.carlist .hot_car {
+    border: 0 none;
+}
+.carlist .hot_car tr td {
+    border-bottom: 1px dotted #BFBFBF;
+    border-top: 0 none;
+    padding: 10px 4px;
+}
+.carlist h2 {
+    background: url("http://image.bitauto.com/dealer/membersite/skins/defaultv2/images/bgs.png") repeat-x scroll 0 -301px #F5F5F5;
+    height: 29px;
+    overflow: hidden;
+    padding-left: 10px;
+}
+.carlist h2 span {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border-left: 1px solid #DEE3E7;
+    display: block;
+    float: left;
+    height: 29px;
+    line-height: 30px;
+    padding: 0 15px;
+}
+.carlist h2 a {
+    background: url("http://image.bitauto.com/dealer/membersite/skins/defaultv2/images/bgs.png") repeat-x scroll 0 -261px transparent;
+    border-right: 1px solid #DEE3E7;
+    display: block;
+    float: left;
+    font-size: 12px;
+    font-weight: 400;
+    height: 29px;
+    line-height: 29px;
+    padding: 0 15px;
+}
+
+.leatest {
+    clear: both;
+}
+.datalist {
+    background: url("http://image.bitauto.com/dealer/membersite/skins/defaultv2/images/bgs.png") no-repeat scroll 0 -460px transparent;
+    display: inline;
+    float: left;
+    height: 100px;
+    margin: 10px 0 0 19px;
+    overflow: hidden;
+    padding: 7px 5px;
+    width: 156px;
+}
+.datalist img {
+    display: block;
+    height: 80px;
+    margin-bottom: 5px;
+    width: 120px;
+}
+.datalist a {
+    clear: both;
+}
+.datalist_pic {
+    display: inline;
+    float: left;
+    margin: 10px 17px 0 10px;
+}
+.datalist_pic img {
+    border: 1px solid #CCCCCC;
+    display: block;
+    height: 80px;
+    margin-bottom: 5px;
+    width: 120px;
+}
+.datalist_pic a {
+    clear: both;
+}
+
+
+.tp {
+    float: left;
+    margin-top: 12px;
+    padding-left: 20px;
+    width: 22%;
+}
+.tp1 {
+    border-color: #C9C9C9;
+    border-right: 1px solid #C9C9C9;
+    border-style: solid;
+    border-width: 1px;
+    float: left;
+    height: 108px;
+    margin-bottom: 3px;
+    position: relative;
+    width: 158px;
+}
+.tp1 A {
+    display: table-cell;
+    height: 108px;
+    padding: 0;
+    text-align: center;
+    vertical-align: middle;
+    width: 158px;
+}
+.tp1 A IMG {
+    vertical-align: middle;
+}
+.tp1 IMG {
+    border-color: -moz-use-text-color;
+    border-right: medium none;
+    border-style: none;
+    border-width: medium;
+    display: block;
+    margin: 0 auto;
+    max-height: 100px;
+    max-width: 150px;
+    padding: 0;
+}
+.tp2 {
+    float: left;
+    padding-left: 4px;
+}
+.tp2 A {
+    color: #0F0CBF;
+    display: block;
+    float: left;
+    height: 50px;
+    line-height: 1.5em;
+    overflow: hidden;
+    width: 158px;
+}
+/**促销**/
+.siderbar {
+    border: 1px solid #DEE3E7;
+    float: right;
+    margin: 10px;
+    overflow: hidden;
+    width: 738px;
+}
+.category {
+    background: url("http://image.bitauto.com/dealer/membersite/skins/defaultv2/images/bgs.png") repeat-x scroll 0 -301px #F5F5F5;
+    height: 29px;
+    overflow: hidden;
+    padding-left: 10px;
+}
+.category ul {
+    border-right: 1px solid #DEE3E7;
+    float: left;
+}
+.category li {
+    background: url("http://image.bitauto.com/dealer/membersite/skins/defaultv2/images/bgs.png") repeat-x scroll 0 -261px transparent;
+    float: left;
+    line-height: 29px;
+}
+.category li a {
+    border-right: 1px solid #FFFFFF;
+    display: block;
+    float: left;
+    height: 28px;
+    line-height: 29px;
+    padding: 0 12px;
+    text-align: center;
+}
+.category li.current {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border-left: 1px solid #DEE3E7;
+    font-size: 14px;
+    font-weight: 700;
+}
+.newslist {
+    padding: 10px 15px;
+    width: 715px;
+}
+
+.pageinfo {
+    text-align: right;
+}
+.pageinfo em {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+}
+.newslist ul {
+    border-top: 1px dotted #D4D4D4;
+    margin: 0 auto;
+    padding-top: 5px;
+}
+.newslist ul li {
+    background: url("http://image.bitauto.com/dealer/membersite/skins/defaultv2/images/bgs.png") no-repeat scroll -292px 12px transparent;
+    border-bottom: 1px dotted #D4D4D4;
+    height: 20px;
+    overflow: hidden;
+    padding: 4px 0 2px 14px;
+}
+.newslist ul li a {
+    float: left;
+    font-size: 14px;
+}
+.newslist ul li small {
+    float: right;
+    font-family: Arial;
+    font-size: 13px;
+}
+.car_list {
+    background: none repeat scroll 0 0 #FAFBFC;
+    border-bottom: 1px solid #E6EAED;
+    padding: 10px;
+}
+.car_list dt {
+    float: left;
+    width: 50px;
+}
+.car_list dd {
+    color: #CCCCCC;
+    margin-left: 50px;
+}
+.car_list dd strong {
+    color: #333333;
+}
+
+/**简介**/
+
+
+.forthnav {
+    border-color: #CCCCCC;
+    border-right: 1px solid #CCCCCC;
+    border-style: solid;
+    border-width: 1px;
+    float: left;
+    margin-bottom: 8px;
+    overflow: hidden;
+    width: 758px;
+}
+.bt2 {
+    background: none repeat scroll 0 0 #F6F6F6;
+    border-bottom: 1px solid #CCCCCC;
+    color: #787877;
+    font-weight: bold;
+    height: 28px;
+    line-height: 28px;
+    margin: 0 auto;
+    text-indent: 16px;
+}
+
+
+.jsgongsi {
+    float: left;
+    overflow: hidden;
+    padding: 13px;
+    width: 732px;
+}
+.jsgongtu {
+    border-color: #CDCDCD;
+    border-right: 3px solid #CDCDCD;
+    border-style: solid;
+    border-width: 3px;
+    float: left;
+    height: 240px;
+    width: 320px;
+}
+.jssongtu1 {
+    display: table-cell;
+    height: 240px;
+    padding: 0;
+    position: relative;
+    text-align: center;
+    vertical-align: middle;
+    width: 320px;
+}
+.jssongtu1 img {
+    border: medium none;
+    display: block;
+    margin: 0 auto;
+    max-height: 240px;
+    max-width: 320px;
+    padding: 0;
+}
+.jsgtbox {
+    background: none repeat scroll 0 0 #CDCDCD;
+    float: right;
+    overflow: hidden;
+    width: 393px;
+}
+.jsgtbox TABLE TD {
+    background: none repeat scroll 0 0 #FFFFFF;
+    clear: both;
+    overflow: hidden;
+}
+.jsgtbox TABLE .tableleft {
+    background: none repeat scroll 0 0 #F6F6F6;
+    color: #787877;
+    font-weight: bold;
+    line-height: 18px;
+    padding: 8px 0;
+    text-align: center;
+    width: 85px;
+}
+.jsgtbox TABLE .tableright {
+    background: none repeat scroll 0 0 #FFFFFF;
+    color: #787877;
+    line-height: 18px;
+    padding: 8px 6px 8px 12px;
+    text-align: left;
+    width: 283px;
+}
+.jsgtbox TABLE .tableleft1 {
+    background: none repeat scroll 0 0 #F6F6F6;
+    color: #787877;
+    font-weight: bold;
+    line-height: 28px;
+    padding: 14px 0;
+    text-align: center;
+    width: 85px;
+}
+.jsgtbox TABLE .tableright1 {
+    background: none repeat scroll 0 0 #FFFFFF;
+    color: #000000;
+    font-weight: bold;
+    line-height: 28px;
+    padding: 14px 6px 14px 12px;
+    text-align: left;
+    width: 283px;
+}
+.jsgtbox TABLE .tableright1 STRONG {
+    font-size: 14px;
+}
+
+.sixthnav {
+    border-color: #CCCCCC;
+    border-right: 1px solid #CCCCCC;
+    border-style: solid;
+    border-width: 1px;
+    float: left;
+    margin-bottom: 10px;
+    overflow: hidden;
+    width: 756px;
+}
+
+.tianjia {
+    padding: 8px;
+}

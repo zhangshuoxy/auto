@@ -1,0 +1,202 @@
+@CHARSET "utf-8";
+#top {
+    background: url("../images/top.jpg") no-repeat scroll 0 0 transparent;
+    clear: both;
+    color: #8B8B8B;
+    margin: 0 auto;
+    overflow: hidden;
+    height: 79px;
+    width: 1002px;
+}
+#top a {
+    color: #8B8B8B;
+}
+#top a:hover {
+    text-decoration: underline;
+}
+#top1 {
+    float: left;
+    padding-bottom: 15px;
+    padding-left: 25px;
+    padding-top: 20px;
+    font-size: 22px;
+    color: white;
+}
+#top2 {
+    float: right;
+    padding-right: 10px;
+    padding-top: 30px;
+}
+#mainmenu {
+    background: url("../images/nav_bg.jpg") repeat-x scroll 0 0 transparent;
+    height: 44px;
+    margin: 0 auto;
+    width: 1002px;
+}
+.menu {
+    margin-left: 58px;
+}
+.menu li {
+    float: left;
+    text-align: center;
+}
+.menu li a {
+    background: url("../images/nav_list.jpg") no-repeat scroll 0 0 transparent;
+    color: #FFFFFF;
+    float: left;
+    font: 14px/43px Arial,Sans-Serif,SimSun;
+    height: 43px;
+    width: 112px;
+}
+.menu li a:hover {
+    background: url("../images/nav_hover.jpg") no-repeat scroll 0 0 transparent;
+    color: #000000;
+ 	float: left;
+    font: 14px/43px Arial,Sans-Serif,SimSun;
+    height: 43px;
+    width: 112px;
+    text-decoration: none;
+}
+.menu li a.current {
+    background: url("../images/nav_hover.jpg") no-repeat scroll 0 0 transparent;
+    color: #000000;
+ 	float: left;
+    font: 14px/43px Arial,Sans-Serif,SimSun;
+    height: 43px;
+    width: 112px;
+    text-decoration: none;
+}
+.menu2 li ul {
+    display: none;
+}
+.menu2 li:hover ul, .menu2 li.over ul {
+    display: block;
+}
+.menu2 #ddmenu2 {
+    background: none repeat scroll 0 0 transparent;
+    clear: left;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 43px;
+    width: 112px;
+    z-index: 999;
+}
+.menu2 #ddmenu2 li {
+    background: none repeat scroll 0 0 transparent;
+    border-bottom: 1px solid #000000;
+    clear: left;
+    height: 30px;
+    padding: 0;
+    width: 112px;
+}
+.menu2 #ddmenu2 li a {
+    background: none repeat scroll 0 0 #4C4C4C;
+    color: #FFFFFF;
+    display: block;
+    font-size: 12px;
+    height: 30px;
+    line-height: 30px;
+    margin: 0;
+    padding: 0;
+    width: 112px;
+}
+.menu2 #ddmenu2 li a:hover {
+    background: none repeat scroll 0 0 #D5D5D3;
+    color: #000000;
+}
+.menu2 #ddmenu2 #hot a {
+    font-weight: bold;
+}
+ul,li {
+	list-style: none;
+}
+
+img {
+	border: 0;
+}
+
+.wrapper {
+	width: 1002px;
+	margin: 0 auto;
+}
+
+#focus {
+	width: 1002px;
+	height: 280px;
+	overflow: hidden;
+	position: relative;
+}
+
+#focus ul {
+	height: 380px;
+	position: absolute;
+}
+
+#focus ul li {
+	float: left;
+	width: 1002px;
+	height: 280px;
+	overflow: hidden;
+	position: relative;
+	background: #000;
+}
+
+#focus ul li div {
+	position: absolute;
+	overflow: hidden;
+}
+
+#focus .btnBg {
+	position: absolute;
+	width: 800px;
+	height: 20px;
+	left: 0;
+	bottom: 0;
+	background: #000;
+}
+
+#focus .btn {
+	position: absolute;
+	width: 780px;
+	height: 10px;
+	padding: 5px 10px;
+	right: 0;
+	bottom: 0;
+	text-align: right;
+}
+
+#focus .btn span {
+	display: inline-block;
+	_display: inline;
+	_zoom: 1;
+	width: 25px;
+	height: 10px;
+	_font-size: 0;
+	margin-left: 5px;
+	cursor: pointer;
+	background: #fff;
+}
+
+#focus .btn span.on {
+	background: #fff;
+}
+
+#focus .preNext {
+	width: 45px;
+	height: 100px;
+	position: absolute;
+	top: 90px;
+	background: url(../images/sprite.png) no-repeat 0 0;
+	cursor: pointer;
+}
+
+#focus .pre {
+	left: 0;
+}
+
+#focus .next {
+	right: 0;
+	background-position: right top;
+}

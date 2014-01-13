@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+  http://www.springframework.org/schema/beans/spring-beans.xsd
+  http://www.springframework.org/schema/aop
+  http://www.springframework.org/schema/aop/spring-aop.xsd
+  http://www.springframework.org/schema/context
+  http://www.springframework.org/schema/context/spring-context.xsd
+  http://www.springframework.org/schema/tx
+  http://www.springframework.org/schema/tx/spring-tx.xsd">
+	<context:component-scan base-package="ym.dao" />
+
+	<!-- 数据源 <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"> 
+		<property name="driverClass" value="com.mysql.jdbc.Driver"/> <property name="jdbcUrl" 
+		value="jdbc:mysql:///book"/> <property name="maxIdleTime" value="25000"/> 
+		<property name="properties"> <props> <prop key="user">root</prop> <prop key="password">root</prop> 
+		<prop key="c3p0.acquire_increment">2</prop> <prop key="c3p0.max_size">20</prop> 
+		<prop key="c3p0.min_size">1</prop> </props> </property> </bean> -->
+
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
+		destroy-method="close" lazy-init="false" p:driverClassName="${dataSource.driverClassName}"
+		p:url="${dataSource.url}" p:username="${dataSource.username}"
+		p:password="${dataSource.password}" p:maxActive="${dataSource.maxActive}"
+		p:maxIdle="${dataSource.maxIdle}" p:maxWait="${dataSource.maxWait}" />
+
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="packagesToScan" value="ym.model"></property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
+				<prop key="hibernate.show_sql">true</prop>
+				<prop key="hibernate.hbm2ddl.auto">update</prop>
+				<prop key="hibernate.cache.use_second_level_cache">true</prop>
+				<prop key="hibernate.cache.region.factory_class">org.hibernate.cache.ehcache.EhCacheRegionFactory</prop>
+				<prop key="hibernate.cache.use_query_cache">true</prop>
+				<!-- 强制Hibernate以更人性化的格式将数据存入二级缓存 -->  
+				<prop key="hibernate.cache.use_structured_entries">true</prop>  
+				<!-- Hibernate将收集有助于性能调节的统计数据 -->  
+				<prop key="hibernate.generate_statistics">true</prop>  
+			
+			<!--  -->
+				<prop key="hibernate.search.default.directory_provider"> 
+				org.hibernate.search.store.RAMDirectoryProvider
+                </prop>  
+                <prop key="hibernate.search.worker.batch_size"> 1000</prop>  
+              <!--    <prop key="hibernate.search.default.indexBase"> d:/index</prop>  -->
+                <prop key="hibernate.lucene.analyzer"> org.apache.lucene.analysis.standard.StandardAnalyzer</prop>  
+                <!--<prop key="hibernate.search.analyzer"> org.apache.lucene.analysis.cn.ChineseAnalyzer</prop>--> 
+                <prop key="hibernate.search.analyzer">org.wltea.analyzer.lucene.IKAnalyzer </prop>
+
+			</props>
+		</property>
+	</bean>
+
+	<!-- 配置sessionFactory <bean id="sessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean"> 
+		<property name="dataSource" ref="dataSource" /> <property name="mappingResources"> 
+		<list> <value>cn/sprhib/model/Users.hbm.xml</value> </list> </property> <property 
+		name="hibernateProperties"> <props> <prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop> 
+		<prop key="hibernate.show_sql">true</prop> <prop key="hibernate.hbm2ddl.auto">update</prop> 
+		</props> </property> </bean> -->
+
+
+	<bean id="transactionManager"
+		class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+
+	<tx:advice id="txAdvice" transaction-manager="transactionManager">
+		<tx:attributes>
+			<tx:method name="save*" propagation="REQUIRED" />
+			<tx:method name="add*" propagation="REQUIRED" />
+			<tx:method name="create*" propagation="REQUIRED" />
+			<tx:method name="insert*" propagation="REQUIRED" />
+			<tx:method name="update*" propagation="REQUIRED" />
+			<tx:method name="merge*" propagation="REQUIRED" />
+			<tx:method name="del*" propagation="REQUIRED" />
+			<tx:method name="remove*" propagation="REQUIRED" />
+			<tx:method name="put*" propagation="REQUIRED" />
+			<tx:method name="use*" propagation="REQUIRED" />
+			<!--hibernate4必须配置为开启事务 否则 getCurrentSession()获取不到 -->
+			<tx:method name="get*" propagation="REQUIRED" read-only="true" />
+			<tx:method name="count*" propagation="REQUIRED" read-only="true" />
+			<tx:method name="find*" propagation="REQUIRED" read-only="true" />
+			<tx:method name="list*" propagation="REQUIRED" read-only="true" />
+			<tx:method name="*" read-only="true" />
+		</tx:attributes>
+	</tx:advice>
+	<aop:config expose-proxy="true">
+		<!-- 只对业务逻辑层实施事务 -->
+		<aop:pointcut id="txPointcut" expression="execution(* ym.service..*.*(..))" />
+		<aop:advisor advice-ref="txAdvice" pointcut-ref="txPointcut" />
+	</aop:config>
+
+
+	<!-- <tx:annotation-driven transaction-manager="transactionManager" /> -->
+
+
+</beans>
+
+
+
+
+
+
+
+
+

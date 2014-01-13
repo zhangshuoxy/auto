@@ -1,0 +1,23 @@
+@CHARSET "utf-8";
+.footer {
+    color: #44a17c;
+    line-height: 34px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: white;
+    width: 1002px;
+    margin-bottom:20px;
+    padding-bottom: 10px;
+    font-size:14px;
+    clear: both;
+}
+.footer a{
+color: #164A84;
+text-decoration: none;
+}
+.footer a:hover{
+text-decoration: underline;
+}
+.footer .copyright,.copyright a{
+	color:#3a3431;
+}
